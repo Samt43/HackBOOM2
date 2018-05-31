@@ -13,9 +13,7 @@ commandRet = subprocess.check_output(['hciconfig'])
 print(commandRet)
 
 matches = re.findall("([0-9A-F]{2}:[0-9A-F]{2}:[0-9a-fA-F]{2}:[0-9A-F]{2}:[0-9A-F]{2}:[0-9A-F]{2})", commandRet)
-print(matches)
 btAdress = matches[0].translate(None,':')
-print(btAdress)
 
 if (matches) : 
     print ('using ' + matches[0] + ' as BT Adress adaptor')
